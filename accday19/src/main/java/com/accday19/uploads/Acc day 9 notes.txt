@@ -1,0 +1,23 @@
+Header->Logo
+Sidebar->
+Main Body-> First page->Persnol Info->Name,Gender,DOB,Phoneno,Email,Blood Group,Next Button
+Address->Address,Country(Optinal),State,City,Pincode,Submit Button
+View->View All details
+Footer->
+
+
+
+
+
+=======================
+disabled={page == Headings.length-1} onClick={()=>{setPage((current)=>current+1);}}
+
+
+
+value={formDetail.name}
+
+
+onChange={(onChange)=>setFormDetail({...formDetail,addr:onChange.target.value})}
+
+
+<td><input type="text" value={formDetail.name} onChange={(onChange)=>setFormDetail({...formDetail,name:onChange.target.value})}></input></td>

@@ -1,0 +1,28 @@
+[10:26 am] Mukesh Singh
+https://dummyapi.io/explorer
+JSON API mock Explorer
+Explore json mock API Data, check sample data and relations
+
+
+
+{/* <tr>
+            <td>{val.id}</td>
+            <td>{val.quote}</td>
+            <td>{val.author}</td>
+          </tr> */}
+
+
+
+val.map(item=>item.id)
+
+val.map(item=>item.age)
+
+
+
+ setChartdata({
+        labels:[val.map(item=>item.id)],
+        datasets:[{
+          label:"first dataset",
+          data:[val.map(item=>item.age)]
+        }],
+      })

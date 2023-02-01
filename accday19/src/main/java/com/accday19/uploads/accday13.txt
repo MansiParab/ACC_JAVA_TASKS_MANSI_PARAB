@@ -1,0 +1,27 @@
+https://www.appsloveworld.com/sample-rest-api-url-for-testing-with-authentication#huserlogin
+
+
+import axios from "axios";
+
+const Api=()=>{
+    const defaultOp={
+        baseURL: "http://restapi.adequateshop.com/api",
+        method: "get",
+        headers: { 'Content-type':'application/json' },
+    };
+
+    let i=axios.create(defaultOp);
+
+    i.interceptors.request.use(function (config){
+        let data=localStorage.getItem('details')
+        const token=data?JSON.parse(data):"";
+        config.headers['Authorization']=data?.token?("Bearer "+data?.token):"";
+        return config;
+    });
+
+    return i;
+};
+
+details={details}
+
+data={val}
